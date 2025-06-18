@@ -3,15 +3,17 @@
 Every been annoyed manually writing data models for your server *and* client? Now you can 
 declaritively describe your data models to share to all your different projects.
 
+`polymodel.yaml`:
+
 ```yaml
 targets: [csharp,rust,typescript]
 outputs:
   rust:
-      dir: test_outputs/rust_output
+      dir: ./rust_output
   typescript:
-      dir: test_outputs/typescript_output
+      dir: ./typescript_output
   csharp:
-      dir: test_outputs/csharp_output
+      dir: ./csharp_output
 models:
   - user:
       email: email
@@ -28,7 +30,15 @@ models:
       accountNumber: number
 ```
 
+`./typescript_output/user.ts`:
 
+```ts
+export interface User {
+	email: string;
+	id: number;
+	password: string;
+}
+```
 ---
 
 
