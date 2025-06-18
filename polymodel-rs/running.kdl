@@ -1,0 +1,23 @@
+layout {
+	tab name="running" {
+		pane split_direction="vertical" {
+			pane name="api" size="75%" start_suspended=true {
+				command "cargo"
+				args "run"
+			}
+
+			pane {
+				pane stacked=true {
+					pane name="testing" start_suspended=true {
+						command "cargo"
+						args "test"
+					}
+				}
+			}
+		}
+
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+		}
+	}
+}
