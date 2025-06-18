@@ -59,3 +59,5 @@ field, `pid`, you can do so in one spot.
 - [ ] omit fields
 - [ ] add more languages
 
+
+> NOTE: not sure if i want to do this in zig or rust yet
